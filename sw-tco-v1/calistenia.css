@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    background: linear-gradient(#0d0d0d, #212121);
+    font-family: "Euclid Circular A", "Poppins";
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+
+.background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+/* 
+
+ SLIDER ---------------------------------------------------------
+
+*/
+
+.slider{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+  .slider ul{
+      display: flex;
+      animation: cambio 20s infinite alternate linear;
+      width: 400%;
+  }
+  .slider li{
+      width: 100%;
+      list-style: none;
+  }
+  .slider img{
+      width: 100%;
+      height: 100%;
+  }
+  @keyframes cambio{
+      0%{margin-left: 0;}
+      20%{margin-left: 0;}
+      
+      25%{margin-left: -100%;}
+      45%{margin-left: -100%;}
+      
+      50%{margin-left: -200%;}
+      70%{margin-left: -200%;}
+      
+      75%{margin-left: -300%;}
+      100%{margin-left: -300%;}
+  }
+  @media only screen and (min-width:320px) and (max-width:768px){
+  .slider, .slider ul, .slider img{
+      height: 100vh;
+  }
+  }
+/* ------------------      SLIDE    --------   ---
+             */
+
+  
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.socials {
+    gap: 20px;
+  }
+  
+.socials a {
+    font-size: 24px;
+  }
+  
+.links {
+    gap: 10px;
+  }
+  
+.legal {
+    color: #0d0d0d;
+    font-size: 14px;
+    margin: 0;
+  }
+/* ----------------- nuevo footer ------------------------- */
+footer.footer-abajo {
+    position: relative; /* Permite que esté al final del flujo del documento */
+    margin-top: auto; /* Empuja el footer al fondo */
+    width: 100%;
+    overflow: hidden; /* Evita que elementos se desborden */
+  }
+  
+footer .background {
+    height: 200px; /* Ajusta según tu diseño */
+  }
+  
+footer .section-footer {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo oscuro para contraste */
+    color: rgb(255, 247, 247);
+    text-align: center;
+  }
+  
+svg {
+    width: 100%;
+    height: auto; /* Mantén la proporción del SVG */
+    transform: scaleY(1.5); /* Ajuste visual */
+    pointer-events: none; /* Evita interacciones con el SVG */
+  }
+  /* --------------------------------------------------- */
+.section-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+    width: 100%;
+  }
+  
+  @media (width > 420px) {
+    .section-footer {
+      align-items: center;
+      padding-left: 0;
+      gap: 20px;
+    }
+  
+    .links {
+      gap: 20px;
+    }
+  }
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: chartreuse;
+}
+
+button:hover{
+    background-color: rgb(18, 245, 67);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:chartreuse; }
+
+header{
+    background-color: rgb(245,245,245);
+    
+}
+/* Aplica el filtro de escala de grises a la imagen */
+.logo {
+    transition: filter 0.3s ease;
+}
+  
+  /* Quita el filtro cuando el cursor está sobre la imagen */
+.logo:hover {
+    filter: grayscale(100%);
+    filter:blur(20%)
+}
+ 
+header .logo{
+    margin: 0;
+    height: 80px;
+    width: 80px;
+    max-height: 190px;
+    max-width: 190px;
+    padding: 0px 12px -1px;
+
+
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(18, 245, 67);
+}
+
+/* Estilo inicial del enlace */
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Estilo del enlace cuando se pasa el cursor por encima */
+a:hover {
+    color: rgb(18, 245, 67);
+    transform: scale(1.1); /* Aumenta el tamaño del enlace */
+ /* text-decoration: underline;  Agrega subrayado */
+    text-decoration: none
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("calistenia-media/IMG_1592.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-programas{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-programas .container{
+    padding: 150px 12px;
+}
+
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-programas p{
+    display: none;
+}
+
+#nuestros-programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+#directiva{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#directiva .container{
+    padding: 150px 12px;
+}
+
+#directiva h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#directiva p{
+    display: none;
+}
+
+#directiva .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/front-end.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/full-stack.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/python.jpg");
+
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-proya h2{
+        margin-top: 0px;
+    }
+
+    #somos-proya .img-container{
+        background-image: url("calistenia-media/IMG_1592.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas h2{
+        font-size: 4em;
+    }
+
+    #nuestros-programas h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas .carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+    /* DIRECTIVA*/
+    #directiva .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #directiva p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #directiva h2{
+        font-size: 4em;
+    }
+
+    #directiva h3{
+        margin-top: 0;
+    }
+
+    #directiva .carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+    /* ---------------------------------- */
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/front-end-cropped.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/full-stack-cropped.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/python-cropped.jpg");
+
+    }
+
+    #caracteristicas{
+        background-image: url("media/background-2.jpeg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1200px) {
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+}
